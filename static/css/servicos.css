@@ -14,7 +14,7 @@ h3 {
     color: white;
 }
 
-/* HERO */
+
 .hero {
     height: 100vh;
     position: relative;
@@ -27,7 +27,6 @@ h3 {
     animation: gradient 14s ease infinite;
 }
 
-/* SERVICE CARD */
 .service-card {
     height: 100%;
     padding: 30px 25px;
@@ -47,15 +46,14 @@ h3 {
     box-shadow: 0 15px 40px rgba(255, 255, 255, 0.08);
 }
 
-.service-card > * {
+.service-card>* {
     transition: transform 0.35s ease;
 }
 
-.service-card:hover > * {
+.service-card:hover>* {
     transform: translateY(-5px);
 }
 
-/* ICON */
 .card-icon {
     font-size: 48px;
     margin-bottom: 20px;
@@ -65,7 +63,6 @@ h3 {
     animation-delay: 0.3s;
 }
 
-/* TEXT */
 .service-card h3 {
     font-size: 1.4rem;
     margin-bottom: 12px;
@@ -85,28 +82,51 @@ h3 {
     animation-delay: 0.6s;
 }
 
-/* CARD DELAYS */
-.col-md-6:nth-child(1) .service-card { animation-delay: 0.1s; }
-.col-md-6:nth-child(2) .service-card { animation-delay: 0.2s; }
-.col-md-6:nth-child(3) .service-card { animation-delay: 0.3s; }
-.col-md-6:nth-child(4) .service-card { animation-delay: 0.4s; }
-.col-md-6:nth-child(5) .service-card { animation-delay: 0.5s; }
-.col-md-6:nth-child(6) .service-card { animation-delay: 0.6s; }
+.col-md-6:nth-child(1) .service-card {
+    animation-delay: 0.1s;
+}
 
-/* ANIMATIONS */
+.col-md-6:nth-child(2) .service-card {
+    animation-delay: 0.2s;
+}
+
+.col-md-6:nth-child(3) .service-card {
+    animation-delay: 0.3s;
+}
+
+.col-md-6:nth-child(4) .service-card {
+    animation-delay: 0.4s;
+}
+
+.col-md-6:nth-child(5) .service-card {
+    animation-delay: 0.5s;
+}
+
+.col-md-6:nth-child(6) .service-card {
+    animation-delay: 0.6s;
+}
+
 @keyframes cardFadeUp {
-    to { opacity: 1; transform: translateY(0); }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes iconPop {
-    to { opacity: 1; transform: scale(1); }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes textFade {
-    to { opacity: 1; transform: translateY(0); }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* BACK BUTTON */
 .btn-voltar {
     background: transparent;
     border: none;

@@ -1,0 +1,130 @@
+.subtitulo {
+    color: white;
+    opacity: 0;
+    animation: aparecer 3s ease forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+    }
+}
+
+h3 {
+    color: white;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #4C1D95, #6D28D9, #2563EB, #7C3AED);
+    background-size: 400% 400%;
+    animation: gradient 14s ease infinite;
+}
+
+/* SERVICE CARD */
+.service-card {
+    height: 100%;
+    padding: 30px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: cardFadeUp 0.8s ease forwards;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.08);
+}
+
+.service-card > * {
+    transition: transform 0.35s ease;
+}
+
+.service-card:hover > * {
+    transform: translateY(-5px);
+}
+
+/* ICON */
+.card-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: scale(0.6);
+    animation: iconPop 0.6s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* TEXT */
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: textFade 0.6s ease forwards;
+    animation-delay: 0.45s;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #d1d5db;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: textFade 0.6s ease forwards;
+    animation-delay: 0.6s;
+}
+
+/* CARD DELAYS */
+.col-md-6:nth-child(1) .service-card { animation-delay: 0.1s; }
+.col-md-6:nth-child(2) .service-card { animation-delay: 0.2s; }
+.col-md-6:nth-child(3) .service-card { animation-delay: 0.3s; }
+.col-md-6:nth-child(4) .service-card { animation-delay: 0.4s; }
+.col-md-6:nth-child(5) .service-card { animation-delay: 0.5s; }
+.col-md-6:nth-child(6) .service-card { animation-delay: 0.6s; }
+
+/* ANIMATIONS */
+@keyframes cardFadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes iconPop {
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes textFade {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* BACK BUTTON */
+.btn-voltar {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: 0.2s ease;
+}
+
+.btn-voltar:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+body {
+    min-height: 100vh;
+    overflow-y: auto;
+}

@@ -37,8 +37,6 @@
     /* marca d’água suave */
     pointer-events: none;
 
-
-
     /* deixa o efeito mais elegante no fundo */
     mix-blend-mode: screen;
 }
@@ -195,17 +193,8 @@ button {
     opacity: 0;
     transform: translate(-40px, -50%);
     animation: fadeSide 1.2s ease forwards;
-}
-
-/* reaplica posição vertical correta */
-.fade-side {
     top: 50%;
     position: absolute;
-}
-
-/* DELAY reutilizado */
-.delay-1 {
-    animation-delay: 0.2s;
 }
 
 @keyframes fadeSide {
@@ -214,3 +203,4 @@ button {
         transform: translate(0, -50%);
     }
 }
+

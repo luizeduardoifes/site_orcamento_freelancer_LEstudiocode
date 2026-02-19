@@ -2,6 +2,7 @@ from database.database import criar_conexao
 from models.orcamento import Orcamento
 from sql.orcamento_sql import *
 
+
 def criar_tabela_orcamento():
     conexao = criar_conexao()
     cursor = conexao.cursor()

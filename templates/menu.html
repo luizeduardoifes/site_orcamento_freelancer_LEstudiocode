@@ -11,7 +11,7 @@
 
     <title>LE Code Studio</title>
 
-    <link rel="stylesheet" href="/static/css/menu.css">
+    <link rel="stylesheet" href="./static/css/menu.css">
 </head>
 
 <body>
@@ -38,8 +38,7 @@
 
                 </div>
             </div>
-
-            <form action="formulario_orcamento" method="post">
+            <form method="post" action="/formulario_orcamento" data-bs-theme="dark">
                 <div class="modal fade" id="formOrcamento" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -49,57 +48,63 @@
                                     <h3>Solicitar Orçamento</h3>
                                 </div>
 
+                                <!-- Nome -->
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Seu nome completo">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" name="nome" id="nome"
+                                        placeholder="Seu nome completo" required>
                                 </div>
 
+                                <!-- Email -->
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="name@example.com">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="name@example.com" required>
                                 </div>
 
+                                <!-- WhatsApp -->
                                 <div class="mb-3">
-                                    <label for="telefone" class="form-label">WhatsApp</label>
-                                    <input type="tel" class="form-control telefone" id="telefone"
-                                        placeholder="(00) 00000-0000" maxlength="15" data-mask="telefone"
-                                        autocomplete="tel">
+                                    <label for="whatsapp" class="form-label">WhatsApp</label>
+                                    <input type="tel" class="form-control telefone" name="whatsapp" id="whatsapp"
+                                        placeholder="(00) 00000-0000" maxlength="15" autocomplete="tel" required>
                                 </div>
 
+                                <!-- Tipo de Serviço -->
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Tipo de Serviço</label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <label for="tipo_servico" class="form-label">Tipo de Serviço</label>
+                                    <select class="form-select" name="tipo_servico" id="tipo_servico" required>
                                         <option selected disabled>Selecione um tipo de serviço</option>
-                                        <option value="1">Desenvolvimento Web</option>
-                                        <option value="2">Aplicativos Mobile</option>
-                                        <option value="3">Design UI/UX</option>
-                                        <option value="4">Consultoria Técnica</option>
-                                        <option value="5">Segurança</option>
-                                        <option value="6">Análise de Dados</option>
+                                        <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                                        <option value="Aplicativos Mobile">Aplicativos Mobile</option>
+                                        <option value="Design UI/UX">Design UI/UX</option>
+                                        <option value="Consultoria Técnica">Consultoria Técnica</option>
+                                        <option value="Segurança">Segurança</option>
+                                        <option value="Análise de Dados">Análise de Dados</option>
                                     </select>
                                 </div>
 
+                                <!-- Descrição -->
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Descrição do
-                                        Sistema(Web)</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <label for="descricao" class="form-label">Descrição do Sistema (Web)</label>
+                                    <textarea class="form-control" name="descricao" id="descricao" rows="3" required></textarea>
                                 </div>
 
+                                <!-- Prazo de Entrega -->
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Prazo de Entrega</label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <label for="prazo_entrega" class="form-label">Prazo de Entrega</label>
+                                    <select class="form-select" name="prazo_entrega" id="prazo_entrega" required>
                                         <option selected disabled>Selecione um prazo de entrega</option>
-                                        <option value="1">Urgente (até 7 dias)</option>
-                                        <option value="2">Curto prazo (15–30 dias)</option>
-                                        <option value="3">Médio prazo (30–60 dias)</option>
-                                        <option value="4">Longo prazo (60+ dias)</option>
-                                        <option value="5">Sem prazo definido</option>
+                                        <option value="Urgente (até 7 dias)">Urgente (até 7 dias)</option>
+                                        <option value="Curto prazo (15–30 dias)">Curto prazo (15–30 dias)</option>
+                                        <option value="Médio prazo (30–60 dias)">Médio prazo (30–60 dias)</option>
+                                        <option value="Longo prazo (60+ dias)">Longo prazo (60+ dias)</option>
+                                        <option value="Sem prazo definido">Sem prazo definido</option>
                                     </select>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button type="submit" class="btn btn-outline-success w-100">
+                                    Enviar
+                                </button>
 
                             </div>
 
@@ -107,6 +112,9 @@
                     </div>
                 </div>
             </form>
+
+
+
 
 
         </section>

@@ -39,57 +39,74 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="formOrcamento" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
+            <form action="formulario_orcamento" method="post">
+                <div class="modal fade" id="formOrcamento" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
 
-                        <div class="modal-body">
-                            <div class="d-flex justify-content-center align-items-center mb-3">
-                                <h3>Solicitar Orçamento</h3>
-                            </div>
+                            <div class="modal-body">
+                                <div class="d-flex justify-content-center align-items-center mb-3">
+                                    <h3>Solicitar Orçamento</h3>
+                                </div>
 
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="Seu nome completo">
-                            </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Seu nome completo">
+                                </div>
 
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="name@example.com">
-                            </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="name@example.com">
+                                </div>
 
-                            <div class="mb-3">
-                                <label for="telefone" class="form-label">WhatsApp</label>
-                                <input type="tel" class="form-control telefone" id="telefone"
-                                    placeholder="(00) 00000-0000" maxlength="15" data-mask="telefone"
-                                    autocomplete="tel">
-                            </div>
+                                <div class="mb-3">
+                                    <label for="telefone" class="form-label">WhatsApp</label>
+                                    <input type="tel" class="form-control telefone" id="telefone"
+                                        placeholder="(00) 00000-0000" maxlength="15" data-mask="telefone"
+                                        autocomplete="tel">
+                                </div>
 
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Tipo de Serviço</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected disabled>Selecione um tipo de serviço</option>
-                                    <option value="1">Desenvolvimento Web</option>
-                                    <option value="2">Aplicativos Mobile</option>
-                                    <option value="3">Design UI/UX</option>
-                                    <option value="4">Consultoria Técnica</option>
-                                    <option value="5">Segurança</option>
-                                    <option value="6">Análise de Dados</option>
-                                </select>
-                            </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Tipo de Serviço</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected disabled>Selecione um tipo de serviço</option>
+                                        <option value="1">Desenvolvimento Web</option>
+                                        <option value="2">Aplicativos Mobile</option>
+                                        <option value="3">Design UI/UX</option>
+                                        <option value="4">Consultoria Técnica</option>
+                                        <option value="5">Segurança</option>
+                                        <option value="6">Análise de Dados</option>
+                                    </select>
+                                </div>
 
-                            <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">Descrição do Sistema(Web)</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Descrição do
+                                        Sistema(Web)</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Prazo de Entrega</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected disabled>Selecione um prazo de entrega</option>
+                                        <option value="1">Urgente (até 7 dias)</option>
+                                        <option value="2">Curto prazo (15–30 dias)</option>
+                                        <option value="3">Médio prazo (30–60 dias)</option>
+                                        <option value="4">Longo prazo (60+ dias)</option>
+                                        <option value="5">Sem prazo definido</option>
+                                    </select>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+
                             </div>
 
                         </div>
-
                     </div>
                 </div>
-            </div>
+            </form>
 
 
         </section>

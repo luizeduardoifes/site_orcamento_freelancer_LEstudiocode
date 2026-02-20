@@ -1,0 +1,105 @@
+html,
+body {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.hero {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 16px;
+
+    background: linear-gradient(-45deg,
+            #4C1D95,
+            #6D28D9,
+            #2563EB,
+            #7C3AED);
+    background-size: 400% 400%;
+    animation: gradient 14s ease infinite;
+}
+
+.form-orcamento {
+    color: white;
+    max-width: 900px;
+    /* deixa o card largo */
+    margin: 60px auto;
+    padding: 40px;
+    border: 2px solid #fff;
+    /* borda branca */
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+    /* fundo suave */
+    backdrop-filter: blur(6px);
+}
+
+/* Campos maiores e elegantes */
+.form-orcamento .form-control,
+.form-orcamento .form-select {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 16px 20px;
+    font-size: 1.05rem;
+}
+
+/* Placeholder */
+.form-orcamento ::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Foco */
+.form-orcamento .form-control:focus,
+.form-orcamento .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: none;
+    background: transparent;
+    color: #fff;
+}
+
+/* Título */
+.form-orcamento h3 {
+    color: #fff;
+}
+
+/* Corrige opções do select */
+.form-orcamento select option {
+    color: #000;
+    background-color: #fff;
+}
+
+/* Animação suave de entrada */
+.form-orcamento {
+    animation: aparecerSuave 1.2s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Keyframes */
+@keyframes aparecerSuave {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-voltar {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: 0.2s ease;
+}
+
+.btn-voltar:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}

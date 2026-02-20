@@ -29,101 +29,17 @@
                 <p class="fade-up delay-2">Desenvolvimento Web & Sistemas Sob Medida</p>
 
                 <div class="botoes fade-up delay-3">
-                    <button class="btn-orcamento" data-bs-toggle="modal" data-bs-target="#formOrcamento">
-                        Solicitar Orçamento
-                    </button>
+                    <a href="/formulario_orcamento.html">
+                        <button class="btn-orcamento" data-bs-toggle="modal" data-bs-target="#formOrcamento">
+                            Solicitar Orçamento
+                        </button>
+                    </a>
                     <a href="/servicos.html">
                         <button class="btn-servicos">Ver Serviços</button>
                     </a>
 
                 </div>
             </div>
-            <form method="post" action="/formulario_orcamento" data-bs-theme="dark">
-                <div class="modal fade" id="formOrcamento" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-body">
-                                <div class="d-flex justify-content-center align-items-center mb-3">
-                                    <h3>Solicitar Orçamento</h3>
-                                </div>
-
-                                <!-- Nome -->
-                                <div class="mb-3">
-                                    <label for="nome" class="form-label">Nome</label>
-                                    <input type="text" class="form-control" name="nome" id="nome"
-                                        placeholder="Seu nome completo" required>
-                                </div>
-
-                                <!-- Email -->
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="name@example.com" required>
-                                </div>
-
-                                <!-- WhatsApp -->
-                                <div class="mb-3">
-                                    <label for="whatsapp" class="form-label">WhatsApp</label>
-                                    <input type="tel" class="form-control telefone" name="whatsapp" id="whatsapp"
-                                        placeholder="(00) 00000-0000" maxlength="15" autocomplete="tel" required>
-                                </div>
-
-                                <!-- Tipo de Serviço -->
-                                <div class="mb-3">
-                                    <label for="tipo_servico" class="form-label">Tipo de Serviço</label>
-                                    <select class="form-select" name="tipo_servico" id="tipo_servico" required>
-                                        <option selected disabled>Selecione um tipo de serviço</option>
-                                        <option value="Desenvolvimento Web">Desenvolvimento Web (R$3.200,00)</option>
-                                        <option value="Aplicativos Mobile">Aplicativos Mobile (R$2.500,00)</option>
-                                        <option value="Design UI/UX">Design UI/UX (R$1.800,00)</option>
-                                        <option value="Consultoria Técnica">Consultoria Técnica (R$2.000,00)</option>
-                                        <option value="Segurança">Segurança (R$1.500,00)</option>
-                                        <option value="Análise de Dados">Análise de Dados (R$2.200,00)</option>
-                                    </select>
-                                </div>
-
-                                <!-- Descrição -->
-                                <div class="mb-3">
-                                    <label for="descricao" class="form-label">Descrição do Sistema (Web)</label>
-                                    <textarea class="form-control" name="descricao" id="descricao" rows="3"
-                                        required></textarea>
-                                </div>
-
-                                <!-- Prazo de Entrega -->
-                                <div class="mb-3">
-                                    <label for="prazo_entrega" class="form-label">Prazo de Entrega</label>
-                                    <select class="form-select" name="prazo_entrega" id="prazo_entrega" required>
-                                        <option selected disabled>Selecione um prazo de entrega</option>
-                                        <option value="Urgente (até 7 dias)">Urgente (até 7 dias)</option>
-                                        <option value="Curto prazo (15–30 dias)">Curto prazo (15–30 dias)</option>
-                                        <option value="Médio prazo (30–60 dias)">Médio prazo (30–60 dias)</option>
-                                        <option value="Longo prazo (60+ dias)">Longo prazo (60+ dias)</option>
-                                        <option value="Sem prazo definido">Sem prazo definido</option>
-                                    </select>
-                                </div>
-
-                                <button type="submit" class="btn btn-outline-success w-100">
-                                    Enviar
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </form>
-
-            {% if sucesso %}
-            <div id="overlay-sucesso">
-                <div class="overlay-box">
-                    <h4>✅ Sucesso!</h4>
-                    <p>{{ sucesso }}</p>
-                    <button onclick="fecharOverlay()">OK</button>
-                </div>
-            </div>
-            {% endif %}
-
 
 
 

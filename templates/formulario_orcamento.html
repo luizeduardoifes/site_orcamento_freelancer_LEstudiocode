@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Orçamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/formulario_orcamento.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <main class="hero">
+        <section>
+            <!-- Botão voltar -->
+            <a href="/" class="btn-voltar">
+                <i class="bi bi-arrow-left-circle-fill"></i>
+            </a>
+
+            <form method="post" action="/formulario_orcamento" class="form-orcamento">
+
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                    <h3>Solicitar Orçamento</h3>
+                </div>
+
+                <!-- Nome -->
+                <div class="mb-4">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control form-control-lg" name="nome" id="nome"
+                        placeholder="Seu nome completo" required>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-4">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-lg" name="email" id="email"
+                        placeholder="name@example.com" required>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="mb-4">
+                    <label for="whatsapp" class="form-label">WhatsApp</label>
+                    <input type="tel" class="form-control form-control-lg telefone" name="whatsapp" id="whatsapp"
+                        placeholder="(00) 00000-0000" maxlength="15" autocomplete="tel" required>
+                </div>
+
+                <!-- Tipo de Serviço -->
+                <div class="mb-4">
+                    <label for="tipo_servico" class="form-label">Tipo de Serviço</label>
+                    <select class="form-select form-select-lg" name="tipo_servico" id="tipo_servico" required>
+                        <option selected disabled>Selecione um tipo de serviço</option>
+                        <option value="Desenvolvimento Web">Desenvolvimento Web (R$3.200,00)</option>
+                        <option value="Aplicativos Mobile">Aplicativos Mobile (R$2.500,00)</option>
+                        <option value="Design UI/UX">Design UI/UX (R$1.800,00)</option>
+                        <option value="Consultoria Técnica">Consultoria Técnica (R$2.000,00)</option>
+                        <option value="Segurança">Segurança (R$1.500,00)</option>
+                        <option value="Análise de Dados">Análise de Dados (R$2.200,00)</option>
+                    </select>
+                </div>
+
+                <!-- Descrição -->
+                <div class="mb-4">
+                    <label for="descricao" class="form-label">Descrição do Sistema (Web)</label>
+                    <textarea class="form-control form-control-lg" name="descricao" id="descricao" rows="4"
+                        required></textarea>
+                </div>
+
+                <!-- Prazo de Entrega -->
+                <div class="mb-4">
+                    <label for="prazo_entrega" class="form-label">Prazo de Entrega</label>
+                    <select class="form-select form-select-lg" name="prazo_entrega" id="prazo_entrega" required>
+                        <option selected disabled>Selecione um prazo de entrega</option>
+                        <option value="Urgente (até 7 dias)">Urgente (até 7 dias)</option>
+                        <option value="Curto prazo (15–30 dias)">Curto prazo (15–30 dias)</option>
+                        <option value="Médio prazo (30–60 dias)">Médio prazo (30–60 dias)</option>
+                        <option value="Longo prazo (60+ dias)">Longo prazo (60+ dias)</option>
+                        <option value="Sem prazo definido">Sem prazo definido</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-lg w-100">
+                    Enviar
+                </button>
+
+            </form>
+
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="/static/js/formulario_orcamento.js"></script>
+</body>
+
+</html>

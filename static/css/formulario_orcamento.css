@@ -103,3 +103,15 @@ body {
     opacity: 0.8;
     transform: scale(1.05);
 }
+
+.modal-css-only {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* quando clicar em OK ou no X */
+#fechar-sucesso:checked~.modal-css-only,
+#fechar-sucesso:checked~.backdrop-css-only {
+    display: none;
+}

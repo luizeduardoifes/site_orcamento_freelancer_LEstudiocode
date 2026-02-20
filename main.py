@@ -20,19 +20,19 @@ async def read_root(request: Request):
 
 @app.get("/menu", response_class=HTMLResponse)
 async def menu(request: Request):
+    sucesso = request.query_params.get("sucesso")
     return templates.TemplateResponse(
         "menu.html",
         {
             "request": request,
-            "erros": None,
+            "sucesso": sucesso,
             "abrir_modal": False
         }
     )
 
 @app.post("/formulario_orcamento", response_class=HTMLResponse)
 async def formulario_orcamento(
-    request: Request,
-    nome: str = Form(...),
+    nome: str = Form(None),
     email: Optional[str] = Form(None),
     whatsapp: Optional[str] = Form(None),
     tipo_servico: str = Form(None),
@@ -49,7 +49,7 @@ async def formulario_orcamento(
     )
     inserir_orcamento(orcamento)
 
-    return templates.TemplateResponse("menu.html", {"request": request})
+    return RedirectResponse(url="/menu?sucesso=Orçamento enviado com sucesso!", status_code=303)
 
 @app.get("/servicos.html")
 async def read_servicos(request: Request):

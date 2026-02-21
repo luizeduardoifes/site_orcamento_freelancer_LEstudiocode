@@ -1,7 +1,5 @@
 from typing import Optional
-
 from fastapi import FastAPI, Form, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import uvicorn
@@ -47,6 +45,6 @@ async def submit_formulario_orcamento(
         prazo_entrega=prazo_entrega
     )
     inserir_orcamento(orcamento)
-    return templates.TemplateResponse("formulario_orcamento.html", {"request": request, "sucesso": "Orçamento enviado com sucesso!"})
+    return templates.TemplateResponse("formulario_orcamento.html", {"request": request, "sucesso": "Orçamento enviado com sucesso!\nPode entrar em contato conosco para mais informações."})
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8000)

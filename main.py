@@ -45,6 +45,6 @@ async def submit_formulario_orcamento(
         prazo_entrega=prazo_entrega
     )
     inserir_orcamento(orcamento)
-    return templates.TemplateResponse("formulario_orcamento.html", {"request": request, "sucesso": "Orçamento enviado com sucesso!\nPode entrar em contato conosco para mais informações."})
+    return templates.TemplateResponse("formulario_orcamento.html", {"request": request, "sucesso": "Orçamento enviado com sucesso!\nPode entrar em contato conosco para mais informações ou acertos de pagamentos."})
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8000)

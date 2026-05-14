@@ -14,17 +14,26 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/")
 async def read_root(request: Request):
-    return templates.TemplateResponse("menu.html", {"request": request})
+    return templates.TemplateResponse(
+        request=request,
+        name="menu.html"
+    )
 
 
 
 @app.get("/servicos")
 async def read_servicos(request: Request):
-    return templates.TemplateResponse("servicos.html", {"request": request})
+    return templates.TemplateResponse(
+        request=request,
+        name="servicos.html"
+    )
 
 @app.get("/formulario_orcamento")
 async def read_formulario_orcamento(request: Request):
-    return templates.TemplateResponse("formulario_orcamento.html", {"request": request})
+    return templates.TemplateResponse(
+        request=request,
+        name="formulario_orcamento.html"
+    )
 
 @app.post("/formulario")
 async def submit_formulario_orcamento(
@@ -45,6 +54,13 @@ async def submit_formulario_orcamento(
         prazo_entrega=prazo_entrega
     )
     inserir_orcamento(orcamento)
-    return templates.TemplateResponse("formulario_orcamento.html", {"request": request, "sucesso": "Orçamento enviado com sucesso!\nPode entrar em contato conosco para mais informações ou acertos de pagamentos."})
+    return templates.TemplateResponse(
+    request=request,
+    name="formulario_orcamento.html",
+    context={
+        "request": request,
+        "sucesso": "Orçamento enviado com sucesso!"
+    }
+)
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8000)
